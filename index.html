@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dandniti • Premium IP Law Consultancy</title>
+    <meta name="description" content="Dandniti — An AI-augmented intellectual property consultancy delivering precise, ethical, and high-quality IP advisory rooted in Indian jurisprudence. Building tomorrow's trusted IP law firm.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Inter:wght@300;400;500;600&amp;display=swap');
+        
+        :root {
+            --royal-blue: #1e3a8a;
+            --maroon: #7f1d1d;
+            --dark-bg: #0f172a;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        .premium-gradient {
+            background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+        }
+
+        .section-header {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+        }
+
+        .nav-link {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: #7f1d1d;
+        }
+
+        .service-card, .resource-card {
+            transition: transform 0.2s cubic-bezier(0.4, 0.0, 0.2, 1), 
+                        box-shadow 0.2s cubic-bezier(0.4, 0.0, 0.2, 1),
+                        border-color 0.2s ease;
+        }
+        
+        .service-card:hover, .resource-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .modal {
+            animation: modalPopIn 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes modalPopIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95) translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .resource-badge {
+            font-size: 0.75rem;
+            padding: 0.125rem 0.625rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            letter-spacing: 0.025em;
+        }
+
+        .tag-pill {
+            font-size: 0.6875rem;
+            padding: 0.125rem 0.5rem;
+            background-color: #1e293b;
+            color: #94a3b8;
+            border-radius: 4px;
+        }
+
+        .prose-custom p {
+            color: #cbd5e1;
+            line-height: 1.75;
+            margin-bottom: 1rem;
+        }
+        
+        .prose-custom h4 {
+            color: #e2e8f0;
+            font-weight: 600;
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .prose-custom ul {
+            color: #cbd5e1;
+            padding-left: 1.25rem;
+        }
+
+        .prose-custom li {
+            margin-bottom: 0.375rem;
+        }
+
+        .nav-active {
+            color: #7f1d1d;
+            font-weight: 600;
+        }
+
+        .knowledge-grid {
+            scrollbar-width: thin;
+            scrollbar-color: #334155 #1e293b;
+        }
+
+        .analysis-result {
+            animation: fadeInUp 0.4s ease forwards;
+        }
+
+        .trident-logo {
+            transition: transform 0.3s ease;
+        }
+
+        .trident-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .luxury-shadow {
+            box-shadow: 0 10px 15px -3px rgb(15 23 42 / 0.3),
+                        0 4px 6px -4px rgb(15 23 42 / 0.3);
+        }
+        
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+<body class="bg-[#0f172a] text-[#e2e8f0] antialiased">
+    <!-- Fixed Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0f172a]/95 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="trident-logo flex items-center justify-center w-11 h-11">
+                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Staff -->
+                            <line x1="12" y1="21" x2="12" y2="7" stroke="#9f1239" stroke-width="2.25" stroke-linecap="round"/>
+                            <!-- Base fork bar -->
+                            <line x1="7.5" y1="7" x2="16.5" y2="7" stroke="#9f1239" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Left prong -->
+                            <path d="M7.5 7 L4.75 2.75" stroke="#9f1239" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Center prong -->
+                            <path d="M12 7 L12 2" stroke="#9f1239" stroke-width="2.25" stroke-linecap="round"/>
+                            <!-- Right prong -->
+                            <path d="M16.5 7 L19.25 2.75" stroke="#9f1239" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Subtle barbs -->
+                            <path d="M5.5 3.5 L4.75 2.75 L5.75 2.25" stroke="#9f1239" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M18.5 3.5 L19.25 2.75 L18.25 2.25" stroke="#9f1239" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-bold text-2xl tracking-tighter heading-serif">Dandniti</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                    <a href="#services" class="nav-link text-[#cbd5e1] hover:text-white">Services</a>
+                    <a href="#edge" class="nav-link text-[#cbd5e1] hover:text-white">The Edge</a>
+                    <a href="#scanner" class="nav-link text-[#cbd5e1] hover:text-white">AI Scanner</a>
+                    <a href="#knowledge" class="nav-link text-[#cbd5e1] hover:text-white">Knowledge Base</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-4">
+                    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" 
+                            class="px-5 py-2.5 text-sm font-semibold rounded-xl border border-white/20 hover:bg-white/5 transition-colors">
+                        Contact
+                    </button>
+                    <button onclick="openContactModal()"
+                            class="px-6 py-2.5 text-sm font-semibold bg-[#1e3a8a] hover:bg-[#1e40af] rounded-xl transition-all active:scale-[0.985]">
+                        Book Consultation
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn"
+                        class="md:hidden w-11 h-11 flex items-center justify-center text-[#cbd5e1] hover:text-white hover:bg-white/5 rounded-xl transition-colors"
+                        onclick="toggleMobileMenu()">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-[#0f172a]">
+            <div class="px-6 py-6 flex flex-col gap-y-4 text-sm font-medium">
+                <a href="#services" class="py-2 text-[#cbd5e1]" onclick="toggleMobileMenu()">Services</a>
+                <a href="#edge" class="py-2 text-[#cbd5e1]" onclick="toggleMobileMenu()">The Edge</a>
+                <a href="#scanner" class="py-2 text-[#cbd5e1]" onclick="toggleMobileMenu()">AI IP Scanner</a>
+                <a href="#knowledge" class="py-2 text-[#cbd5e1]" onclick="toggleMobileMenu()">Knowledge Base</a>
+                <div class="pt-3 border-t border-white/10 flex flex-col gap-y-3">
+                    <button onclick="toggleMobileMenu(); document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" 
+                            class="w-full py-3 text-center rounded-xl border border-white/20 text-sm font-semibold">
+                        Contact Us
+                    </button>
+                    <button onclick="toggleMobileMenu(); openContactModal()" 
+                            class="w-full py-3 text-center bg-[#1e3a8a] hover:bg-[#1e40af] rounded-xl text-sm font-semibold transition-colors">
+                        Book Consultation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-20 pb-16 md:pt-24 md:pb-20 border-b border-white/10">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-2xl bg-white/5 border border-white/10 mb-6">
+                <div class="w-2 h-2 bg-[#7f1d1d] rounded-full animate-pulse"></div>
+                <span class="text-xs font-semibold tracking-[1.5px] text-[#94a3b8]">EST. 2025 • BUILDING TOWARDS A FULL IP LAW FIRM</span>
+            </div>
+            
+            <h1 class="text-6xl md:text-7xl font-bold tracking-tighter heading-serif leading-[1.05] mb-6">
+                Precision.<br>
+                <span class="text-[#7f1d1d]">Integrity.</span><br>
+                AI-Powered Insight.
+            </h1>
+            
+            <p class="max-w-2xl mx-auto text-xl md:text-2xl text-[#94a3b8] font-light tracking-tight mb-10">
+                An emerging Indian IP law consultancy delivering thoughtful, high-quality advisory 
+                to innovators, startups, and businesses — while building the foundation for a premier IP law firm.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button onclick="document.getElementById('knowledge').scrollIntoView({ behavior: 'smooth' })" 
+                        class="group w-full sm:w-auto px-8 py-4 bg-white text-[#0f172a] font-semibold rounded-2xl flex items-center justify-center gap-x-3 hover:bg-[#f8fafc] active:scale-[0.985] transition-all text-base">
+                    <span>Explore Knowledge Base</span>
+                    <i class="fa-solid fa-arrow-right group-hover:translate-x-0.5 transition-transform"></i>
+                </button>
+                
+                <button onclick="document.getElementById('scanner').scrollIntoView({ behavior: 'smooth' })" 
+                        class="group w-full sm:w-auto px-8 py-4 border border-white/30 hover:bg-white/5 font-semibold rounded-2xl flex items-center justify-center gap-x-3 transition-all text-base">
+                    <span>Try AI IP Scanner</span>
+                </button>
+            </div>
+            
+            <div class="mt-12 flex items-center justify-center gap-x-8 text-xs text-[#64748b]">
+                <div class="flex items-center gap-x-2">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>4th Year, Jindal Global Law School</span>
+                </div>
+                <div class="hidden sm:block w-px h-3 bg-white/20"></div>
+                <div>Specializing in IP Law &amp; Policy</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="max-w-7xl mx-auto px-6 pt-16 pb-12">
+        <div class="flex flex-col items-center text-center mb-12">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-[#7f1d1d] mb-3">WHAT WE OFFER</div>
+            <h2 class="section-header tracking-tight">Services Grounded in<br>Indian IP Jurisprudence</h2>
+            <p class="mt-4 max-w-md text-[#94a3b8]">Clear, actionable support across the full spectrum of intellectual property — delivered with precision and care.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Service Cards populated by JS -->
+        </div>
+    </section>
+
+    <!-- The Edge Section -->
+    <section id="edge" class="bg-[#1e293b] border-y border-white/10 py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-x-12 items-center">
+                <div class="md:col-span-5 mb-10 md:mb-0">
+                    <div class="uppercase tracking-[2px] text-xs font-semibold text-[#7f1d1d] mb-3">WHY DANDNITI</div>
+                    <h2 class="section-header tracking-tight leading-none">The Dandniti Edge</h2>
+                    <p class="mt-5 text-[#94a3b8] text-[15px]">We combine modern AI tools with deep respect for Indian statutory frameworks and judicial precedent. The result is faster, clearer, and more reliable IP guidance — without compromising on quality or ethics.</p>
+                    
+                    <div class="mt-8 inline-flex items-center gap-x-2 text-sm">
+                        <div class="px-3 py-1 bg-white/5 rounded-full text-xs font-medium flex items-center gap-x-1.5">
+                            <i class="fa-solid fa-check text-emerald-400"></i>
+                            <span>Honest. Transparent. No overpromising.</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-7">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <!-- Edge cards -->
+                        <div class="bg-[#0f172a] border border-white/10 rounded-3xl p-6">
+                            <div class="w-9 h-9 flex items-center justify-center bg-[#1e3a8a]/20 text-[#1e3a8a] rounded-2xl mb-4">
+                                <i class="fa-solid fa-robot text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-lg tracking-tight mb-2">AI-Augmented Drafting &amp; Research</h4>
+                            <p class="text-sm text-[#94a3b8]">We use AI for exhaustive prior art searches, claim drafting assistance, risk flagging, and document review — always with senior human oversight and final responsibility.</p>
+                        </div>
+                        
+                        <div class="bg-[#0f172a] border border-white/10 rounded-3xl p-6">
+                            <div class="w-9 h-9 flex items-center justify-center bg-[#7f1d1d]/20 text-[#7f1d1d] rounded-2xl mb-4">
+                                <i class="fa-solid fa-balance-scale text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-lg tracking-tight mb-2">Rooted in Indian Law</h4>
+                            <p class="text-sm text-[#94a3b8]">Every recommendation is grounded in the Patents Act 1970, Trade Marks Act 1999, Copyright Act 1957, and relevant case law — not generic global templates.</p>
+                        </div>
+                        
+                        <div class="bg-[#0f172a] border border-white/10 rounded-3xl p-6">
+                            <div class="w-9 h-9 flex items-center justify-center bg-[#1e3a8a]/20 text-[#1e3a8a] rounded-2xl mb-4">
+                                <i class="fa-solid fa-handshake text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-lg tracking-tight mb-2">Accessible &amp; Client-First</h4>
+                            <p class="text-sm text-[#94a3b8]">Clear communication. Reasonable timelines. Special attention to startups, MSMEs, and individual inventors who need practical, cost-conscious guidance.</p>
+                        </div>
+                        
+                        <div class="bg-[#0f172a] border border-white/10 rounded-3xl p-6">
+                            <div class="w-9 h-9 flex items-center justify-center bg-[#7f1d1d]/20 text-[#7f1d1d] rounded-2xl mb-4">
+                                <i class="fa-solid fa-shield-halved text-xl"></i>
+                            </div>
+                            <h4 class="font-semibold text-lg tracking-tight mb-2">Building Long-Term Trust</h4>
+                            <p class="text-sm text-[#94a3b8]">We are currently operating as a focused consultancy. Our goal is to convert this into a full-service IP law firm after graduation and Bar enrollment — with the same values.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI IP Scanner Section -->
+    <section id="scanner" class="max-w-5xl mx-auto px-6 pt-16 pb-20">
+        <div class="text-center mb-10">
+            <div class="inline-flex items-center px-4 py-1 rounded-2xl bg-[#7f1d1d]/10 border border-[#7f1d1d]/30 text-[#7f1d1d] text-xs font-bold tracking-widest mb-4">INTERACTIVE DEMO</div>
+            <h2 class="section-header tracking-tight">Experience the AI IP Scanner</h2>
+            <p class="mt-3 max-w-lg mx-auto text-[#94a3b8]">Get an instant preliminary analysis of your invention, brand, or creative work. This demo showcases how we combine AI speed with legal intelligence.</p>
+            <div class="mt-2 text-[10px] text-[#64748b] flex items-center justify-center gap-x-1.5">
+                <i class="fa-solid fa-info-circle"></i>
+                <span>Not legal advice. For demonstration purposes only.</span>
+            </div>
+        </div>
+
+        <div class="bg-[#1e293b] border border-white/10 rounded-3xl p-8 md:p-10 luxury-shadow">
+            <div class="grid md:grid-cols-5 gap-8">
+                <!-- Input Form -->
+                <div class="md:col-span-2">
+                    <div class="space-y-5">
+                        <div>
+                            <label class="block text-xs font-semibold tracking-wider text-[#94a3b8] mb-2">TYPE OF INTELLECTUAL PROPERTY</label>
+                            <select id="ip-type" class="w-full bg-[#0f172a] border border-white/20 focus:border-[#1e3a8a] rounded-2xl px-4 py-3 text-sm outline-none">
+                                <option value="patent">Patent (Invention / Process / Product)</option>
+                                <option value="trademark">Trademark (Brand Name / Logo / Device)</option>
+                                <option value="copyright">Copyright (Creative Work / Content)</option>
+                                <option value="trade-secret">Trade Secret / Confidential Information</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-xs font-semibold tracking-wider text-[#94a3b8] mb-2">DESCRIBE YOUR IDEA, INVENTION, BRAND OR WORK</label>
+                            <textarea id="ip-description" rows="6" placeholder="Example: A novel biodegradable packaging material made from agricultural waste that extends shelf life of perishables by 40%..." 
+                                      class="w-full bg-[#0f172a] border border-white/20 focus:border-[#1e3a8a] rounded-3xl px-5 py-4 text-sm resize-y min-h-[138px] outline-none placeholder:text-[#64748b]"></textarea>
+                            <div class="text-[10px] text-right text-[#64748b] mt-1">Be as detailed as possible for better analysis</div>
+                        </div>
+                        
+                        <button onclick="runAIAnalysis()"
+                                class="w-full flex items-center justify-center gap-x-3 bg-[#1e3a8a] hover:bg-[#1e40af] active:bg-[#1e3a8a] transition-all py-4 rounded-2xl font-semibold text-base">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span>Analyze with Dandniti AI</span>
+                        </button>
+                        
+                        <div class="text-center">
+                            <button onclick="loadSampleInput()" class="text-xs text-[#64748b] hover:text-[#94a3b8] underline decoration-dotted">Load sample input</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Results Panel -->
+                <div class="md:col-span-3">
+                    <div id="scanner-results-placeholder" class="h-full flex flex-col items-center justify-center text-center border border-dashed border-white/20 rounded-3xl p-8">
+                        <i class="fa-solid fa-file-lines text-4xl text-white/30 mb-4"></i>
+                        <p class="text-sm text-[#64748b]">Your AI-powered preliminary analysis will appear here</p>
+                        <p class="text-xs mt-1 text-[#475569]">Results include risk flags, legal considerations under Indian law, and recommended next steps.</p>
+                    </div>
+                    
+                    <div id="scanner-results" class="hidden h-full bg-[#0f172a] border border-white/10 rounded-3xl p-7 analysis-result">
+                        <div class="flex items-center justify-between mb-5">
+                            <div>
+                                <div class="flex items-center gap-x-2">
+                                    <span class="font-bold text-lg">Preliminary Analysis</span>
+                                </div>
+                                <div id="analysis-type-badge" class="inline-block mt-1 text-xs px-3 py-0.5 bg-white/10 rounded-full font-medium"></div>
+                            </div>
+                            <div onclick="resetScanner()" class="cursor-pointer text-[#64748b] hover:text-white text-xs flex items-center gap-x-1">
+                                <i class="fa-solid fa-redo"></i>
+                                <span class="hidden sm:inline">Reset</span>
+                            </div>
+                        </div>
+                        
+                        <div id="analysis-content" class="space-y-5 text-sm">
+                            <!-- Populated dynamically by JS -->
+                        </div>
+                        
+                        <div class="mt-7 pt-5 border-t border-white/10 flex flex-col sm:flex-row gap-3">
+                            <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); resetScanner();" 
+                                    class="flex-1 py-3 text-sm font-semibold bg-[#7f1d1d] hover:bg-[#9f1239] rounded-2xl transition-colors">
+                                Book Full Professional Review
+                            </button>
+                            <button onclick="resetScanner()" 
+                                    class="flex-1 py-3 text-sm font-medium border border-white/20 hover:bg-white/5 rounded-2xl transition-colors">
+                                Try Another Analysis
+                            </button>
+                        </div>
+                        
+                        <div class="mt-4 text-[10px] text-center text-[#475569]">
+                            This is a demonstration. A real analysis includes comprehensive searches and qualified legal review.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Knowledge Base Section -->
+    <section id="knowledge" class="bg-[#1e293b] border-y border-white/10 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-y-4 mb-9">
+                <div>
+                    <div class="uppercase tracking-[2px] text-xs font-bold text-[#7f1d1d] mb-2">CURATED RESOURCES</div>
+                    <h2 class="section-header tracking-tight">Knowledge Repository</h2>
+                    <p class="mt-2 text-[#94a3b8] max-w-md">Search and explore case briefs, academic analyses, and important judgments. Built to help you understand Indian IP law deeply.</p>
+                </div>
+                
+                <div class="text-xs text-[#64748b] hidden md:block">8 resources • Updated regularly • Always verify with primary sources</div>
+            </div>
+
+            <!-- Search and Filters -->
+            <div class="flex flex-col lg:flex-row gap-4 mb-8">
+                <div class="flex-1 relative">
+                    <i class="fa-solid fa-search absolute left-5 top-4 text-[#64748b]"></i>
+                    <input type="text" id="knowledge-search" placeholder="Search by title, keywords, or case name..." 
+                           onkeyup="filterKnowledgeBase()"
+                           class="w-full bg-[#0f172a] border border-white/20 focus:border-[#1e3a8a] pl-12 pr-5 py-3.5 rounded-2xl text-sm placeholder:text-[#64748b] outline-none">
+                </div>
+                
+                <div class="flex flex-wrap gap-2" id="filter-buttons">
+                    <!-- Populated by JS: All, Case Briefs, Academic Papers, Articles & Notes -->
+                </div>
+            </div>
+
+            <!-- Resources Grid -->
+            <div id="knowledge-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                <!-- Populated dynamically via JS -->
+            </div>
+            
+            <div class="text-center mt-8">
+                <p class="text-xs text-[#64748b]">More resources added regularly. Have a specific case or topic in mind? <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" class="underline hover:text-[#94a3b8]">Let us know</button>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Booking Section -->
+    <section id="contact" class="max-w-4xl mx-auto px-6 pt-16 pb-20">
+        <div class="text-center mb-10">
+            <h2 class="section-header tracking-tight">Start a Conversation</h2>
+            <p class="mt-3 text-[#94a3b8]">Whether you have a specific IP matter or simply want to explore how we can support your goals, we’d be glad to hear from you.</p>
+        </div>
+
+        <div class="bg-[#1e293b] border border-white/10 rounded-3xl p-8 md:p-10">
+            <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="text-xs font-semibold tracking-wider block mb-2 text-[#94a3b8]">FULL NAME</label>
+                        <input type="text" id="contact-name" required class="w-full bg-[#0f172a] border border-white/20 focus:border-[#1e3a8a] rounded-2xl px-5 py-3 text-sm outline-none" placeholder="Your full name">
+                    </div>
+                    <div>
+                        <label class="text-xs font-semibold tracking-wider block mb-2 text-[#94a3b8]">EMAIL ADDRESS</label>
+                        <input type="email" id="contact-email" required class="w-full bg-[#0f172a] border border-white/20 focus:border-[#1e3a8a] rounded-2xl px-5 py-3 text-sm outline-none" placeholder="you@company.com">
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="text-xs font-semibold tracking-wider block mb-2 text-[#94a3b8]">PHONE / WHATSAPP</label>
+                        <input type="tel" id="contact-phone" class="w-full bg-[#0f172a] border border-white/20 focus:border-[#1e3a8a] rounded-2xl px-5 py-3 text-sm outline-none" placeholder="+91 98XXXXXXXX">
+                    </div>
+                    <div>
+                        <label class="text-xs font-semibold tracking-wider block mb-2 text-[#94a3b8]">SERVICE OF INTEREST</label>
+                        <select id="contact-service" class="w-full bg-[#0f172a] border border-white/20 focus:border-[#1e3a8a] rounded-2xl px-5 py-3 text-sm outline-none">
+                            <option value="">Select a service (optional)</option>
+                            <option>Patent Drafting &amp; Prosecution</option>
+                            <option>Trademark Registration &amp; Protection</option>
+                            <option>Copyright Registration &amp; Enforcement</option>
+                            <option>Trade Secrets Strategy</option>
+                            <option>IP Portfolio Management</option>
+                            <option>IP Litigation Support</option>
+                            <option>General IP Advisory / Consultation</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="text-xs font-semibold tracking-wider block mb-2 text-[#94a3b8]">MESSAGE / BRIEF DESCRIPTION OF YOUR REQUIREMENT</label>
+                    <textarea id="contact-message" rows="4" required class="w-full bg-[#0f172a] border border-white/20 focus:border-[#1e3a8a] rounded-3xl px-5 py-4 text-sm outline-none resize-y" placeholder="Please share a short description of your IP matter or query..."></textarea>
+                </div>
+                
+                <div class="pt-2">
+                    <button type="submit" 
+                            class="w-full md:w-auto px-10 py-4 bg-[#1e3a8a] hover:bg-[#1e40af] active:bg-[#1e3a8a] transition-all font-semibold rounded-2xl flex items-center justify-center gap-x-3 text-base">
+                        <span>Send Message &amp; Request Consultation</span>
+                    </button>
+                    <p class="text-center md:text-left text-[10px] text-[#64748b] mt-3">We typically respond within 24–48 hours. All information is kept confidential.</p>
+                </div>
+            </form>
+        </div>
+        
+        <div class="text-center mt-8 text-xs text-[#64748b]">
+            <p>Led by <span class="font-medium text-[#94a3b8]">Arya</span> • 4th Year Law Student, Jindal Global Law School • IP Law &amp; Policy</p>
+            <p class="mt-1">Currently building Dandniti as a focused consultancy • Transitioning to full IP law firm post Bar enrollment</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-9">
+        <div class="max-w-7xl mx-auto px-6 text-xs text-[#64748b] flex flex-col md:flex-row md:items-center md:justify-between gap-y-3">
+            <div>© 2025–2026 Dandniti. All rights reserved. This is an educational and professional building platform.</div>
+            <div class="flex items-center gap-x-5">
+                <span>Not a law firm. Legal services provided in accordance with applicable regulations.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Service Detail Modal -->
+    <div id="service-modal" onclick="if (event.target.id === 'service-modal') closeServiceModal()" class="hidden fixed inset-0 z-[100] bg-black/70 flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="bg-[#1e293b] border border-white/10 w-full max-w-2xl rounded-3xl overflow-hidden modal">
+            <div class="px-8 pt-7 pb-6 border-b border-white/10 flex items-start justify-between">
+                <div>
+                    <div id="service-modal-icon" class="w-10 h-10 flex items-center justify-center rounded-2xl mb-3"></div>
+                    <h3 id="service-modal-title" class="text-2xl font-bold tracking-tight"></h3>
+                </div>
+                <button onclick="closeServiceModal()" class="text-[#64748b] hover:text-white text-2xl leading-none mt-1">&times;</button>
+            </div>
+            
+            <div class="p-8 prose-custom text-sm" id="service-modal-content">
+                <!-- Populated by JS -->
+            </div>
+            
+            <div class="px-8 py-5 bg-[#0f172a] border-t border-white/10 flex justify-end gap-x-3">
+                <button onclick="closeServiceModal()" class="px-6 py-2.5 text-sm font-medium border border-white/20 rounded-2xl hover:bg-white/5">Close</button>
+                <button onclick="selectServiceAndContact()" class="px-6 py-2.5 text-sm font-semibold bg-[#1e3a8a] hover:bg-[#1e40af] rounded-2xl">Discuss This Service</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource Detail Modal -->
+    <div id="resource-modal" onclick="if (event.target.id === 'resource-modal') closeResourceModal()" class="hidden fixed inset-0 z-[100] bg-black/70 flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="bg-[#1e293b] border border-white/10 w-full max-w-3xl max-h-[92vh] rounded-3xl flex flex-col modal">
+            <div class="px-8 pt-7 pb-5 border-b border-white/10 flex items-start justify-between flex-shrink-0">
+                <div class="pr-4">
+                    <div id="resource-modal-badge" class="resource-badge inline-block mb-2"></div>
+                    <h3 id="resource-modal-title" class="text-2xl font-bold tracking-tight pr-8"></h3>
+                    <p id="resource-modal-subtitle" class="text-sm text-[#94a3b8] mt-1"></p>
+                </div>
+                <button onclick="closeResourceModal()" class="text-[#64748b] hover:text-white text-3xl leading-none mt-1 flex-shrink-0">&times;</button>
+            </div>
+            
+            <div class="flex-1 overflow-y-auto p-8 prose-custom text-[14.5px] knowledge-grid" id="resource-modal-content">
+                <!-- Populated by JS -->
+            </div>
+            
+            <div class="px-8 py-5 bg-[#0f172a] border-t border-white/10 flex-shrink-0 flex flex-col sm:flex-row gap-3 items-center">
+                <div class="flex-1 text-xs text-[#64748b]">
+                    For educational purposes. Always refer to official judgments and primary sources.
+                </div>
+                <div class="flex gap-x-3">
+                    <button onclick="copyCitation()" class="px-5 py-2 text-xs font-medium border border-white/20 hover:bg-white/5 rounded-2xl flex items-center gap-x-2">
+                        <i class="fa-solid fa-copy"></i>
+                        <span>Copy Citation</span>
+                    </button>
+                    <button onclick="closeResourceModal()" class="px-6 py-2 text-xs font-semibold bg-white/90 text-[#0f172a] hover:bg-white rounded-2xl">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Toast -->
+    <div id="success-toast" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-[200] bg-emerald-900 border border-emerald-700 text-emerald-100 px-6 py-3 rounded-2xl shadow-xl flex items-center gap-x-3 text-sm">
+        <i class="fa-solid fa-check-circle"></i>
+        <span id="toast-message"></span>
+    </div>
+
+    <script>
+        // Tailwind script configuration
+        function initTailwind() {
+            document.documentElement.style.setProperty('--accent-royal', '#1e3a8a');
+            document.documentElement.style.setProperty('--accent-maroon', '#7f1d1d');
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const btn = document.getElementById('mobile-menu-btn');
+            menu.classList.toggle('hidden');
+            
+            if (!menu.classList.contains('hidden')) {
+                btn.innerHTML = '<i class="fa-solid fa-times text-xl"></i>';
+            } else {
+                btn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+            }
+        }
+
+        // Services Data
+        const services = [
+            {
+                id: 1,
+                title: "Patent Drafting & Prosecution",
+                shortDesc: "Complete support from prior art to grant — including responses to examination reports.",
+                icon: "fa-lightbulb",
+                iconColor: "#1e3a8a",
+                fullContent: `
+                    <p>We provide end-to-end patent services under the Patents Act, 1970. Our process begins with a thorough AI-assisted prior art search followed by strategic claim drafting that balances breadth and defensibility.</p>
+                    
+                    <h4>What’s Included</h4>
+                    <ul>
+                        <li>Comprehensive prior art and patentability assessment</li>
+                        <li>Complete specification, claims, abstract & drawings preparation</li>
+                        <li>Filing at the Indian Patent Office (provisional & complete)</li>
+                        <li>Responding to First Examination Reports (FER) and office actions</li>
+                        <li>Hearing representation and grant assistance</li>
+                        <li>Post-grant support (oppositions, renewals)</li>
+                    </ul>
+                    
+                    <h4>Our Approach</h4>
+                    <p>AI tools accelerate searching and initial drafting. Every document receives careful human review by someone trained in Indian patent practice. We pay special attention to Sections 3(d), 3(k), and other key exclusions that frequently arise in Indian prosecution.</p>
+                    
+                    <div class="mt-4 p-4 bg-[#0f172a] rounded-2xl text-xs border border-white/10">
+                        <strong>Best suited for:</strong> Tech startups, research institutions, manufacturing companies, and individual inventors with novel technical solutions.
+                    </div>
+                `
+            },
+            {
+                id: 2,
+                title: "Trademark Search, Filing & Protection",
+                shortDesc: "Clearance searches, strategic filing, and ongoing protection across classes in India.",
+                icon: "fa-trademark",
+                iconColor: "#7f1d1d",
+                fullContent: `
+                    <p>We help you build strong, enforceable trademark rights under the Trade Marks Act, 1999. Our work starts with comprehensive clearance searches (common law + registry) to reduce refusal risk.</p>
+                    
+                    <h4>What’s Included</h4>
+                    <ul>
+                        <li>Multi-class trademark clearance search & opinion</li>
+                        <li>Strategic filing in appropriate classes and jurisdictions</li>
+                        <li>Responding to examination reports and show-cause hearings</li>
+                        <li>Opposition proceedings (filing & defending)</li>
+                        <li>Renewal management and watch services</li>
+                        <li>Advice on well-known mark recognition and enforcement</li>
+                    </ul>
+                    
+                    <h4>Our Approach</h4>
+                    <p>We focus on distinctiveness from day one. Descriptive or weak marks are flagged early with suggestions for stronger alternatives. We also advise on proper use, licensing, and assignment strategies.</p>
+                    
+                    <div class="mt-4 p-4 bg-[#0f172a] rounded-2xl text-xs border border-white/10">
+                        <strong>Best suited for:</strong> Startups building brands, e-commerce businesses, consumer product companies, and anyone adopting a new name or logo.
+                    </div>
+                `
+            },
+            {
+                id: 3,
+                title: "Copyright Registration & Enforcement",
+                shortDesc: "Registration, licensing advice, and enforcement strategies for creative and literary works.",
+                icon: "fa-copyright",
+                iconColor: "#1e3a8a",
+                fullContent: `
+                    <p>We assist creators, publishers, software companies, and content owners in protecting and commercialising their works under the Copyright Act, 1957.</p>
+                    
+                    <h4>What’s Included</h4>
+                    <ul>
+                        <li>Copyright registration (literary, artistic, musical, cinematograph, sound recording, software)</li>
+                        <li>Assignment and licensing agreement drafting & review</li>
+                        <li>Fair dealing and exception analysis (especially educational & research use)</li>
+                        <li>DMCA-style takedown notices and platform enforcement (India focus)</li>
+                        <li>Infringement analysis and cease & desist strategies</li>
+                    </ul>
+                    
+                    <h4>Our Approach</h4>
+                    <p>We pay close attention to the 2012 amendments and key judicial developments, including the Delhi High Court’s landmark decision on educational photocopying. We help clients understand what is protectable and how to strengthen their position without overreaching.</p>
+                `
+            },
+            {
+                id: 4,
+                title: "Trade Secrets & Confidential Information",
+                shortDesc: "Practical strategies to protect proprietary know-how, formulas, processes, and data.",
+                icon: "fa-user-secret",
+                iconColor: "#7f1d1d",
+                fullContent: `
+                    <p>India does not have a dedicated trade secrets statute. Protection relies on contract law, equity, and provisions of the Information Technology Act, 2000. We help clients build robust practical protection.</p>
+                    
+                    <h4>What’s Included</h4>
+                    <ul>
+                        <li>Audit of existing confidentiality measures and contracts</li>
+                        <li>Drafting and review of NDAs, non-compete clauses, and employment agreements</li>
+                        <li>Internal policies for data classification and access control</li>
+                        <li>Incident response planning for suspected misappropriation</li>
+                        <li>Advice on criminal remedies under IT Act Sections 43, 66 & 72</li>
+                    </ul>
+                    
+                    <h4>Our Approach</h4>
+                    <p>We combine legal drafting with pragmatic business advice. Strong contracts are essential, but so are technical and organisational measures. We help you document what is secret and why it has value.</p>
+                `
+            },
+            {
+                id: 5,
+                title: "IP Portfolio Management",
+                shortDesc: "Audit, strategy, maintenance, and commercialisation planning for your IP assets.",
+                icon: "fa-folder-tree",
+                iconColor: "#1e3a8a",
+                fullContent: `
+                    <p>Many businesses accumulate IP without a clear strategy. We help you understand what you own, what it’s worth, and how to align it with business goals.</p>
+                    
+                    <h4>What’s Included</h4>
+                    <ul>
+                        <li>Comprehensive IP audit and asset mapping</li>
+                        <li>Portfolio health check (renewals, maintenance, gaps)</li>
+                        <li>IP strategy workshops tailored to your industry and stage</li>
+                        <li>Commercialisation pathways: licensing, assignment, joint ventures</li>
+                        <li>Freedom-to-operate (FTO) reviews for new products/markets</li>
+                    </ul>
+                    
+                    <h4>Our Approach</h4>
+                    <p>We treat IP as a business asset, not just a legal formality. Our recommendations are always tied to your commercial objectives — whether that’s fundraising, expansion, or defensive positioning.</p>
+                `
+            },
+            {
+                id: 6,
+                title: "IP Litigation Support & Advisory",
+                shortDesc: "Strategic advice, evidence preparation, and support in IP disputes and opposition proceedings.",
+                icon: "fa-gavel",
+                iconColor: "#7f1d1d",
+                fullContent: `
+                    <p>While we are currently focused on advisory and prosecution work, we provide high-quality support in contentious matters and work alongside senior counsel when litigation becomes necessary.</p>
+                    
+                    <h4>What’s Included</h4>
+                    <ul>
+                        <li>Pre-litigation strategy and risk assessment</li>
+                        <li>Evidence gathering, documentation, and chronology preparation</li>
+                        <li>Drafting of pleadings, written submissions, and evidence affidavits (under supervision)</li>
+                        <li>Opposition and revocation proceedings before the IP Office / IPAB</li>
+                        <li>Coordination with senior advocates and technical experts</li>
+                    </ul>
+                    
+                    <h4>Our Approach</h4>
+                    <p>We believe most IP disputes are best resolved through careful strategy and negotiation before they reach court. When litigation is unavoidable, we ensure you are thoroughly prepared and that your commercial interests remain central.</p>
+                    
+                    <div class="mt-4 p-4 bg-[#0f172a] rounded-2xl text-xs border border-white/10">
+                        <strong>Note:</strong> As we build toward full firm status, complex litigation matters are handled in association with experienced counsel.
+                    </div>
+                `
+            }
+        ];
+
+        // Render Service Cards
+        function renderServices() {
+            const container = document.querySelector('#services .grid');
+            container.innerHTML = '';
+            
+            services.forEach(service => {
+                const card = document.createElement('div');
+                card.className = `service-card bg-[#1e293b] border border-white/10 hover:border-white/20 rounded-3xl p-7 flex flex-col cursor-pointer`;
+                card.innerHTML = `
+                    <div class="flex items-center gap-x-4 mb-5">
+                        <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-2xl" style="background-color: ${service.iconColor}20; color: ${service.iconColor}">
+                            <i class="fa-solid ${service.icon} text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-xl tracking-tight leading-tight">${service.title}</h3>
+                    </div>
+                    <p class="text-sm text-[#94a3b8] flex-1">${service.shortDesc}</p>
+                    <div class="mt-6 pt-5 border-t border-white/10 flex items-center justify-between text-xs">
+                        <span class="font-medium text-[#7f1d1d]">Learn more</span>
+                        <i class="fa-solid fa-arrow-right text-[#7f1d1d]"></i>
+                    </div>
+                `;
+                
+                card.onclick = () => openServiceModal(service.id);
+                container.appendChild(card);
+            });
+        }
+
+        let currentServiceId = null;
+
+        function openServiceModal(serviceId) {
+            const service = services.find(s => s.id === serviceId);
+            if (!service) return;
+            
+            currentServiceId = serviceId;
+            
+            document.getElementById('service-modal-title').innerHTML = service.title;
+            
+            const iconContainer = document.getElementById('service-modal-icon');
+            iconContainer.innerHTML = `<i class="fa-solid ${service.icon} text-3xl" style="color: ${service.iconColor}"></i>`;
+            iconContainer.style.backgroundColor = `${service.iconColor}15`;
+            
+            document.getElementById('service-modal-content').innerHTML = service.fullContent;
+            document.getElementById('service-modal').classList.remove('hidden');
+            document.getElementById('service-modal').classList.add('flex');
+        }
+
+        function closeServiceModal() {
+            const modal = document.getElementById('service-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        function selectServiceAndContact() {
+            closeServiceModal();
+            setTimeout(() => {
+                const form = document.getElementById('contact-form');
+                const serviceSelect = document.getElementById('contact-service');
+                
+                if (currentServiceId) {
+                    const service = services.find(s => s.id === currentServiceId);
+                    if (service) {
+                        // Try to match service name
+                        for (let i = 0; i < serviceSelect.options.length; i++) {
+                            if (serviceSelect.options[i].text.includes(service.title.split(' ')[0])) {
+                                serviceSelect.selectedIndex = i;
+                                break;
+                            }
+                        }
+                    }
+                }
+                
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                setTimeout(() => {
+                    document.getElementById('contact-message').focus();
+                }, 800);
+            }, 300);
+        }
+
+        // Knowledge Base Data - Accurate & Honest
+        let resources = [
+            {
+                id: 1,
+                type: "Case Brief",
+                title: "Novartis AG v. Union of India",
+                subtitle: "Supreme Court of India (2013) 6 SCC 1 | Patents Act, Section 3(d)",
+                excerpt: "The Supreme Court upheld the rejection of the patent application for the beta-crystalline form of imatinib mesylate (Glivec), ruling that it failed to meet the 'enhanced efficacy' requirement under Section 3(d).",
+                fullContent: `<p><strong>Facts:</strong> Novartis filed a patent application in India for the beta-crystalline form of imatinib mesylate, a known compound used in the treatment of chronic myeloid leukemia. The Controller rejected the application under Section 3(d) of the Patents Act, 1970, which excludes from patentability the mere discovery of a new form of a known substance unless it results in the enhancement of the known efficacy of that substance.</p>
+                
+                <p><strong>Issues:</strong> (1) Whether Section 3(d) is constitutional; (2) Whether the beta-crystalline form demonstrated enhanced efficacy over the known substance.</p>
+                
+                <p><strong>Held:</strong> The Supreme Court upheld the constitutional validity of Section 3(d) and confirmed that the beta form did not show any significant enhancement in therapeutic efficacy. The Court emphasised that the provision was introduced to prevent evergreening of patents and to ensure that genuine innovation is rewarded.</p>
+                
+                <p><strong>Significance:</strong> This remains the leading authority on the interpretation of Section 3(d). It has had a profound impact on pharmaceutical patent practice in India and is frequently cited in examination reports and opposition proceedings.</p>`,
+                tags: ["Patent", "Section 3(d)", "Evergreening", "Pharma", "Supreme Court"],
+                year: "2013"
+            },
+            {
+                id: 2,
+                type: "Case Brief",
+                title: "Bayer Corporation v. Natco Pharma Ltd.",
+                subtitle: "Controller of Patents (2012) • IPAB & Bombay High Court upheld | First Compulsory Licence in India",
+                excerpt: "India’s first compulsory licence was granted to Natco Pharma for the generic manufacture of Bayer’s patented anti-cancer drug Nexavar (sorafenib tosylate) on grounds of public non-satisfaction of reasonable requirements and non-working of the patent in India.",
+                fullContent: `<p><strong>Facts:</strong> Bayer held a patent for sorafenib tosylate (Nexavar), used in the treatment of kidney and liver cancer. The drug was priced at approximately ₹2.8 lakh per month. Natco applied for a compulsory licence under Section 84 of the Patents Act, arguing that the reasonable requirements of the public were not being met, the patented invention was not available at a reasonably affordable price, and it was not being worked in India to an adequate extent.</p>
+                
+                <p><strong>Order:</strong> The Controller granted the first compulsory licence in India to Natco in March 2012. Natco was permitted to manufacture and sell the generic version at ₹8,800 per month, paying Bayer a royalty of 6% of net sales.</p>
+                
+                <p><strong>Outcome on Appeal:</strong> The Intellectual Property Appellate Board and the Bombay High Court upheld the grant. The Supreme Court dismissed Bayer’s special leave petition.</p>
+                
+                <p><strong>Significance:</strong> The case established important precedents on the interpretation of “worked in the territory of India”, affordability, and the public interest in access to life-saving medicines. It remains a landmark in the global discourse on compulsory licensing and the TRIPS flexibilities.</p>`,
+                tags: ["Patent", "Compulsory Licence", "Public Health", "Section 84", "Pharma"],
+                year: "2012"
+            },
+            {
+                id: 3,
+                type: "Case Brief",
+                title: "University of Oxford v. Rameshwari Photocopy Services",
+                subtitle: "Delhi High Court (2016) | Copyright Act, Section 52(1)(i) — Fair Dealing",
+                excerpt: "The Delhi High Court held that the preparation and sale of course packs (photocopied excerpts from books) by a photocopy shop for students of Delhi University did not amount to copyright infringement, as it constituted fair dealing for educational purposes.",
+                fullContent: `<p><strong>Facts:</strong> Several international publishers sued a photocopy shop operating near Delhi University and the University itself for copyright infringement. The shop was preparing and selling “course packs” — spiral-bound compilations of photocopied chapters and excerpts prescribed in university reading lists.</p>
+                
+                <p><strong>Held:</strong> A Division Bench of the Delhi High Court ruled in favour of the defendants. It held that the reproduction of copyrighted material for educational purposes by students and teachers fell within the fair dealing exception under Section 52(1)(i) of the Copyright Act, 1957. The Court emphasised the importance of access to educational materials and the purpose of the exception.</p>
+                
+                <p><strong>Significance:</strong> The judgment is a landmark in Indian copyright law concerning access to knowledge and education. It provides strong protection for course pack practices in Indian universities and has been influential in shaping the understanding of fair dealing in the educational context.</p>`,
+                tags: ["Copyright", "Fair Dealing", "Education", "Section 52", "Delhi High Court"],
+                year: "2016"
+            },
+            {
+                id: 4,
+                type: "Case Brief",
+                title: "Cadila Health Care Ltd. v. Cadila Pharmaceuticals Ltd.",
+                subtitle: "Supreme Court of India (2001) 5 SCC 73 | Trade Marks — Deceptive Similarity",
+                excerpt: "The Supreme Court laid down the principles for determining deceptive similarity in pharmaceutical trademarks and held that a stricter test must be applied in the case of medicines because even small confusion can have serious consequences for public health.",
+                fullContent: `<p><strong>Facts:</strong> Cadila Health Care (plaintiff) and Cadila Pharmaceuticals (defendant) both used marks containing the word “Cadila” for medicinal preparations. The plaintiff sought an injunction against the defendant for passing off.</p>
+                
+                <p><strong>Held:</strong> The Supreme Court laid down detailed guidelines for determining deceptive similarity, particularly in the pharmaceutical sector. It held that the test must be stricter because confusion in medicines can have disastrous consequences. The Court also discussed the importance of colour schemes, packaging, and the class of consumers (doctors vs. patients).</p>
+                
+                <p><strong>Significance:</strong> This judgment remains the leading authority on passing off and deceptive similarity in the pharmaceutical and healthcare sector in India. It continues to be cited extensively in trademark disputes involving medicines.</p>`,
+                tags: ["Trademark", "Passing Off", "Deceptive Similarity", "Pharma", "Supreme Court"],
+                year: "2001"
+            },
+            {
+                id: 5,
+                type: "Academic Paper",
+                title: "Section 3(d) of the Indian Patents Act: A Critical Analysis",
+                subtitle: "Dandniti Research Note • 2025",
+                excerpt: "An examination of the legislative intent behind Section 3(d), its interpretation in Novartis, subsequent application by the Patent Office, and its continuing relevance in preventing evergreening while encouraging genuine pharmaceutical innovation.",
+                fullContent: `<p><strong>Legislative Intent:</b> Section 3(d) was introduced by the Patents (Amendment) Act, 2005 to comply with TRIPS while addressing concerns about evergreening. The provision was specifically designed to prevent the grant of patents for minor modifications of known substances that do not result in any significant enhancement of efficacy.</p>
+                
+                <p><strong>Key Principles from Novartis:</b> The Supreme Court clarified that “efficacy” in the pharmaceutical context primarily means therapeutic efficacy. The Court rejected the argument that improved bioavailability or stability alone would satisfy the test unless there is a corresponding improvement in therapeutic effect.</p>
+                
+                <p><strong>Current Practice:</b> The Indian Patent Office applies Section 3(d) rigorously. Applicants are frequently required to provide comparative data showing enhanced efficacy. The provision has become one of the most important tools for pre-grant and post-grant opposition in the pharmaceutical sector.</p>
+                
+                <p><strong>Continuing Relevance:</b> Even a decade after Novartis, Section 3(d) remains central to Indian patent examination. It continues to balance the need to reward genuine innovation against the imperative of ensuring affordable access to medicines.</p>`,
+                tags: ["Patent", "Section 3(d)", "Evergreening", "Policy", "Pharma"],
+                year: "2025"
+            },
+            {
+                id: 6,
+                type: "Academic Paper",
+                title: "Compulsory Licensing in India: Lessons from the Nexavar Case",
+                subtitle: "Dandniti Research Note • 2025",
+                excerpt: "A detailed analysis of India’s first compulsory licence — the grounds on which it was granted, the royalty determination, judicial outcomes, and its lasting impact on the interpretation of Section 84 and public health considerations.",
+                fullContent: `<p><strong>Statutory Framework:</b> Section 84 of the Patents Act, 1970 permits any interested person to apply for a compulsory licence after three years from the date of grant of patent on three grounds: (a) reasonable requirements of the public not satisfied; (b) patented invention not available at reasonably affordable price; (c) patented invention not worked in India.</p>
+                
+                <p><strong>The Nexavar Decision:</b> The Controller’s order carefully analysed each ground. It held that the high price and limited availability meant the reasonable requirements of the public were not satisfied. It also held that “worked in India” requires local manufacture, not merely importation.</p>
+                
+                <p><strong>Royalty Determination:</b> The Controller fixed royalty at 6% of net sales — a figure that has been discussed extensively in subsequent literature. The decision demonstrated that compulsory licensing can be implemented in a manner that respects the patentee’s rights while addressing public health needs.</p>
+                
+                <p><strong>Legacy:</b> The case remains the only compulsory licence granted in India to date. It has influenced global debates on TRIPS flexibilities and continues to be studied by policymakers and scholars worldwide.</p>`,
+                tags: ["Patent", "Compulsory Licence", "Section 84", "Public Health", "Policy"],
+                year: "2025"
+            },
+            {
+                id: 7,
+                type: "Article / Note",
+                title: "Trade Secrets Protection in India: Practical Framework",
+                subtitle: "Dandniti Legal Note • 2025",
+                excerpt: "A practical guide to protecting trade secrets in India through contracts, organisational measures, and available legal remedies under the Information Technology Act and common law principles.",
+                fullContent: `<p><strong>Legal Position:</b> India does not have a dedicated trade secrets statute. Protection is derived from the law of contracts, equity (breach of confidence), and certain provisions of the Information Technology Act, 2000 (Sections 43, 66, and 72).</p>
+                
+                <p><strong>Key Protective Measures:</b></p>
+                <ul>
+                    <li>Well-drafted Non-Disclosure Agreements (NDAs) with clear definitions of confidential information and obligations</li>
+                    <li>Non-compete and non-solicitation clauses (subject to Section 27 of the Indian Contract Act)</li>
+                    <li>Internal policies on data classification, access control, and employee onboarding/offboarding</li>
+                    <li>Technical measures such as encryption, access logs, and watermarking</li>
+                </ul>
+                
+                <p><strong>Remedies:</b> In cases of misappropriation, civil remedies include injunctions and damages. Criminal complaints can be filed under the IT Act in appropriate cases. Recent judicial trends show increasing willingness by courts to protect genuinely confidential business information.</p>
+                
+                <p><strong>Recommendation:</b> Every business with valuable proprietary information should conduct a trade secret audit and implement a documented protection programme.</p>`,
+                tags: ["Trade Secret", "Confidentiality", "IT Act", "Contracts", "Best Practices"],
+                year: "2025"
+            },
+            {
+                id: 8,
+                type: "Article / Note",
+                title: "Key Principles of Trademark Distinctiveness under Indian Law",
+                subtitle: "Dandniti Legal Note • 2025",
+                excerpt: "A concise overview of the spectrum of distinctiveness, absolute and relative grounds of refusal, and practical tips for selecting and protecting strong trademarks in India.",
+                fullContent: `<p><strong>The Distinctiveness Spectrum:</b> Indian trademark law, like most common law jurisdictions, evaluates marks on a spectrum from generic (never registrable) to arbitrary/fanciful (inherently registrable). Descriptive marks require evidence of acquired distinctiveness (secondary meaning) through use.</p>
+                
+                <p><strong>Absolute Grounds (Section 9):</b> Marks that are devoid of distinctive character, or consist exclusively of indications that have become customary in the trade, or are descriptive of the goods/services are refused registration unless they have acquired distinctiveness.</p>
+                
+                <p><strong>Relative Grounds (Section 11):</b> A mark will be refused if it is identical or similar to an earlier mark and there exists a likelihood of confusion. Well-known marks receive broader protection even across dissimilar goods.</p>
+                
+                <p><strong>Practical Advice:</b> When choosing a new brand name, prefer arbitrary or fanciful marks. Conduct both registry and common-law searches early. Use the mark consistently and maintain evidence of use. Consider filing in multiple classes if expansion is planned.</p>`,
+                tags: ["Trademark", "Distinctiveness", "Section 9", "Section 11", "Brand Strategy"],
+                year: "2025"
+            }
+        ];
+
+        let currentFilter = 'all';
+        let currentSearchTerm = '';
+
+        // Render Filter Buttons
+        function renderFilterButtons() {
+            const container = document.getElementById('filter-buttons');
+            container.innerHTML = '';
+            
+            const filters = [
+                { label: 'All', value: 'all' },
+                { label: 'Case Briefs', value: 'Case Brief' },
+                { label: 'Academic Papers', value: 'Academic Paper' },
+                { label: 'Articles & Notes', value: 'Article / Note' }
+            ];
+            
+            filters.forEach(filter => {
+                const btn = document.createElement('button');
+                btn.className = `px-5 py-2 text-xs font-semibold rounded-2xl border transition-all whitespace-nowrap ${currentFilter === filter.value ? 'bg-[#7f1d1d] border-[#7f1d1d] text-white' : 'border-white/20 hover:bg-white/5 text-[#cbd5e1]'}`;
+                btn.textContent = filter.label;
+                btn.onclick = () => {
+                    currentFilter = filter.value;
+                    renderFilterButtons();
+                    filterKnowledgeBase();
+                };
+                container.appendChild(btn);
+            });
+        }
+
+        // Render Knowledge Base Cards
+        function renderKnowledgeBase(filteredResources) {
+            const container = document.getElementById('knowledge-grid');
+            container.innerHTML = '';
+            
+            if (filteredResources.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full text-center py-12 text-[#64748b]">
+                        <i class="fa-solid fa-search text-3xl mb-3 opacity-40"></i>
+                        <p>No resources match your search. Try broadening your query.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            filteredResources.forEach(resource => {
+                const card = document.createElement('div');
+                card.className = `resource-card bg-[#0f172a] border border-white/10 hover:border-white/30 rounded-3xl p-6 flex flex-col cursor-pointer h-full`;
+                
+                let badgeColor = resource.type === 'Case Brief' ? 'bg-[#1e3a8a] text-white' : 
+                                 resource.type === 'Academic Paper' ? 'bg-[#7f1d1d] text-white' : 
+                                 'bg-[#334155] text-[#cbd5e1]';
+                
+                card.innerHTML = `
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="resource-badge ${badgeColor}">${resource.type}</span>
+                        <span class="text-xs text-[#64748b]">${resource.year}</span>
+                    </div>
+                    
+                    <h4 class="font-semibold text-[15px] leading-snug tracking-tight mb-2 flex-1">${resource.title}</h4>
+                    
+                    <p class="text-xs text-[#64748b] line-clamp-2 mb-4">${resource.excerpt}</p>
+                    
+                    <div class="flex flex-wrap gap-1.5 mb-4">
+                        ${resource.tags.slice(0, 3).map(tag => `<span class="tag-pill">${tag}</span>`).join('')}
+                    </div>
+                    
+                    <div class="mt-auto pt-4 border-t border-white/10 flex items-center text-xs font-medium text-[#7f1d1d]">
+                        Read full brief <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </div>
+                `;
+                
+                card.onclick = () => openResourceModal(resource.id);
+                container.appendChild(card);
+            });
+        }
+
+        // Filter Knowledge Base
+        function filterKnowledgeBase() {
+            const searchInput = document.getElementById('knowledge-search').value.toLowerCase().trim();
+            currentSearchTerm = searchInput;
+            
+            let filtered = resources;
+            
+            // Apply type filter
+            if (currentFilter !== 'all') {
+                filtered = filtered.filter(r => r.type === currentFilter);
+            }
+            
+            // Apply search
+            if (searchInput.length > 0) {
+                filtered = filtered.filter(r => 
+                    r.title.toLowerCase().includes(searchInput) ||
+                    r.excerpt.toLowerCase().includes(searchInput) ||
+                    r.subtitle.toLowerCase().includes(searchInput) ||
+                    r.tags.some(tag => tag.toLowerCase().includes(searchInput))
+                );
+            }
+            
+            renderKnowledgeBase(filtered);
+        }
+
+        let currentResourceId = null;
+
+        function openResourceModal(resourceId) {
+            const resource = resources.find(r => r.id === resourceId);
+            if (!resource) return;
+            
+            currentResourceId = resourceId;
+            
+            // Badge
+            const badgeEl = document.getElementById('resource-modal-badge');
+            let badgeColor = resource.type === 'Case Brief' ? 'bg-[#1e3a8a] text-white' : 
+                             resource.type === 'Academic Paper' ? 'bg-[#7f1d1d] text-white' : 
+                             'bg-[#334155] text-[#cbd5e1]';
+            badgeEl.className = `resource-badge ${badgeColor}`;
+            badgeEl.textContent = resource.type;
+            
+            document.getElementById('resource-modal-title').textContent = resource.title;
+            document.getElementById('resource-modal-subtitle').textContent = resource.subtitle;
+            document.getElementById('resource-modal-content').innerHTML = resource.fullContent;
+            
+            document.getElementById('resource-modal').classList.remove('hidden');
+            document.getElementById('resource-modal').classList.add('flex');
+        }
+
+        function closeResourceModal() {
+            const modal = document.getElementById('resource-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        function copyCitation() {
+            const resource = resources.find(r => r.id === currentResourceId);
+            if (!resource) return;
+            
+            const citation = `${resource.title}, ${resource.subtitle}. Dandniti Knowledge Repository (2025).`;
+            
+            navigator.clipboard.writeText(citation).then(() => {
+                const originalText = event.currentTarget ? event.currentTarget.innerHTML : '';
+                const btns = document.querySelectorAll('#resource-modal button');
+                btns.forEach(btn => {
+                    if (btn.textContent.includes('Copy')) {
+                        const orig = btn.innerHTML;
+                        btn.innerHTML = `<i class="fa-solid fa-check"></i> <span>Copied!</span>`;
+                        setTimeout(() => {
+                            if (btn) btn.innerHTML = orig;
+                        }, 1800);
+                    }
+                });
+            }).catch(() => {
+                // Fallback
+                prompt("Copy this citation:", citation);
+            });
+        }
+
+        // AI IP Scanner Logic
+        function runAIAnalysis() {
+            const type = document.getElementById('ip-type').value;
+            const description = document.getElementById('ip-description').value.trim();
+            
+            if (!description || description.length < 20) {
+                alert("Please provide a more detailed description (at least 20 characters) for a meaningful analysis.");
+                return;
+            }
+            
+            // Show loading state
+            const placeholder = document.getElementById('scanner-results-placeholder');
+            const resultsPanel = document.getElementById('scanner-results');
+            
+            placeholder.classList.add('hidden');
+            resultsPanel.classList.remove('hidden');
+            resultsPanel.innerHTML = `
+                <div class="flex flex-col items-center justify-center h-[280px]">
+                    <div class="w-8 h-8 border-2 border-[#1e3a8a] border-t-transparent rounded-full animate-spin mb-4"></div>
+                    <p class="text-sm text-[#94a3b8]">Analyzing with Dandniti AI...</p>
+                    <p class="text-xs text-[#64748b] mt-1">Reviewing against Indian IP statutes &amp; case law</p>
+                </div>
+            `;
+            
+            // Simulate processing time
+            setTimeout(() => {
+                const analysis = generateAnalysis(type, description);
+                displayAnalysisResults(type, analysis, description);
+            }, 1350);
+        }
+
+        function generateAnalysis(type, description) {
+            const lowerDesc = description.toLowerCase();
+            let analysis = {
+                summary: "",
+                legalNotes: "",
+                risks: [],
+                recommendations: [],
+                assessment: ""
+            };
+            
+            if (type === 'patent') {
+                analysis.summary = "Your description suggests a technical invention or process that may be eligible for patent protection under the Patents Act, 1970, subject to satisfying the criteria of novelty, inventive step, and industrial applicability.";
+                
+                if (lowerDesc.includes('software') || lowerDesc.includes('algorithm') || lowerDesc.includes('app') || lowerDesc.includes('computer')) {
+                    analysis.legalNotes = "Important: Under Section 3(k) of the Patents Act, computer programs 'per se' are excluded from patentability. However, if your invention demonstrates a technical effect or solves a technical problem in a novel way, it may still qualify. The Indian Patent Office examines this distinction carefully.";
+                } else if (lowerDesc.includes('drug') || lowerDesc.includes('pharma') || lowerDesc.includes('medicine') || lowerDesc.includes('compound')) {
+                    analysis.legalNotes = "Pharmaceutical inventions are subject to rigorous scrutiny under Section 3(d). You will likely need to demonstrate significant enhancement in therapeutic efficacy over known forms or substances. Comparative data will be essential.";
+                } else {
+                    analysis.legalNotes = "Ensure your claims are drafted to clearly distinguish the novel technical contribution. Broad functional claims are often vulnerable during examination.";
+                }
+                
+                analysis.risks = [
+                    "Prior art may exist in published literature, patents, or public use — a professional search is strongly recommended.",
+                    "Section 3 exclusions (especially 3(d) and 3(k)) are frequently applied by the Indian Patent Office.",
+                    "Timing of filing is critical to preserve novelty."
+                ];
+                
+                analysis.recommendations = [
+                    "Conduct a comprehensive prior art search (including patent databases and non-patent literature).",
+                    "Prepare detailed comparative data if the invention is an improvement over existing technology.",
+                    "Consider filing a provisional application to secure an early priority date while refining the complete specification."
+                ];
+                
+                analysis.assessment = "Promising technical concept. Strength depends heavily on novelty and how well the inventive step is demonstrated in the specification.";
+                
+            } else if (type === 'trademark') {
+                analysis.summary = "Your brand/mark appears to be a word, logo, or device intended to distinguish goods or services. Protection is available under the Trade Marks Act, 1999, provided it is distinctive and not deceptive or conflicting with earlier marks.";
+                
+                if (lowerDesc.includes('best') || lowerDesc.includes('super') || lowerDesc.includes('premium') || lowerDesc.includes('quality')) {
+                    analysis.legalNotes = "Marks that are descriptive or laudatory (e.g., 'Best', 'Super', 'Premium') are generally weak and may face refusal under Section 9 unless they have acquired distinctiveness through extensive use. Consider a more distinctive or arbitrary name.";
+                } else {
+                    analysis.legalNotes = "Arbitrary or fanciful marks (invented words with no dictionary meaning) enjoy the strongest protection. Descriptive marks require proof of secondary meaning.";
+                }
+                
+                analysis.risks = [
+                    "Identical or similar marks may already exist in your class or related classes.",
+                    "Common law rights of prior users can create passing-off risk even without registration.",
+                    "Generic or highly descriptive terms are difficult to protect exclusively."
+                ];
+                
+                analysis.recommendations = [
+                    "Conduct both official registry search and common-law / internet search before filing.",
+                    "File in all relevant classes where you currently or plan to use the mark.",
+                    "Maintain evidence of first use and continuous commercial use."
+                ];
+                
+                analysis.assessment = "Trademark strength depends primarily on distinctiveness and clearance. Early clearance search is the most important next step.";
+                
+            } else if (type === 'copyright') {
+                analysis.summary = "Your work appears to be an original literary, artistic, musical, or other creative expression. Copyright protection arises automatically upon creation under the Copyright Act, 1957, but registration provides evidentiary benefits.";
+                
+                analysis.legalNotes = "Copyright protects expression, not ideas, facts, or methods. For software, both source code and object code are protectable as literary works. Fair dealing exceptions (especially for education and research) are interpreted reasonably generously in India.";
+                
+                analysis.risks = [
+                    "Independent creation by another person can lead to parallel rights.",
+                    "If the work incorporates third-party content, clearance or licensing may be required.",
+                    "Moral rights (especially attribution and integrity) cannot be waived in India."
+                ];
+                
+                analysis.recommendations = [
+                    "Register the copyright for stronger evidentiary value in enforcement actions.",
+                    "Use clear copyright notices and maintain records of creation and authorship.",
+                    "Review any third-party content or AI-generated elements for ownership issues."
+                ];
+                
+                analysis.assessment = "Copyright protection is relatively straightforward for original works. Registration and proper documentation strengthen your position significantly.";
+                
+            } else if (type === 'trade-secret') {
+                analysis.summary = "You are describing proprietary information (formula, process, know-how, customer data, etc.) that derives value from being secret. In India, protection is primarily through contract, equity, and the Information Technology Act, 2000.";
+                
+                analysis.legalNotes = "There is no dedicated trade secrets statute. Courts protect genuinely confidential information through breach of confidence actions. Strong NDAs, internal policies, and technical safeguards are essential. Misappropriation can also attract criminal liability under the IT Act in appropriate cases.";
+                
+                analysis.risks = [
+                    "Information that is publicly known or easily reverse-engineered has limited protection.",
+                    "Employee mobility creates ongoing risk — robust exit procedures are critical.",
+                    "Once secrecy is lost, protection is generally irretrievable."
+                ];
+                
+                analysis.recommendations = [
+                    "Audit what information qualifies as a trade secret and document its economic value.",
+                    "Implement layered protection: NDAs, access controls, encryption, and employee training.",
+                    "Have clear policies for onboarding and offboarding employees and contractors."
+                ];
+                
+                analysis.assessment = "Trade secret protection is practical and cost-effective when properly implemented. The strength lies in your internal systems and documentation.";
+            }
+            
+            return analysis;
+        }
+
+        function displayAnalysisResults(type, analysis, originalDescription) {
+            const resultsPanel = document.getElementById('scanner-results');
+            
+            let typeLabel = '';
+            if (type === 'patent') typeLabel = 'Patent Analysis';
+            else if (type === 'trademark') typeLabel = 'Trademark Analysis';
+            else if (type === 'copyright') typeLabel = 'Copyright Analysis';
+            else typeLabel = 'Trade Secret Analysis';
+            
+            let html = `
+                <div class="flex items-center justify-between mb-5">
+                    <div>
+                        <span class="font-bold text-lg">${typeLabel}</span>
+                        <div class="inline-block ml-3 text-xs px-3 py-0.5 bg-white/10 rounded-full font-medium">${type.toUpperCase()}</div>
+                    </div>
+                    <div onclick="resetScanner()" class="cursor-pointer text-[#64748b] hover:text-white text-xs flex items-center gap-x-1">
+                        <i class="fa-solid fa-redo"></i>
+                        <span class="hidden sm:inline">New Analysis</span>
+                    </div>
+                </div>
+                
+                <div class="space-y-5 text-sm">
+                    <div>
+                        <div class="text-xs uppercase tracking-wider text-[#64748b] mb-1.5">PRELIMINARY ASSESSMENT</div>
+                        <p class="text-[#e2e8f0]">${analysis.summary}</p>
+                    </div>
+                    
+                    ${analysis.legalNotes ? `
+                    <div>
+                        <div class="text-xs uppercase tracking-wider text-[#64748b] mb-1.5">KEY LEGAL CONSIDERATIONS (INDIAN LAW)</div>
+                        <p class="text-[#cbd5e1]">${analysis.legalNotes}</p>
+                    </div>` : ''}
+                    
+                    <div>
+                        <div class="text-xs uppercase tracking-wider text-[#64748b] mb-1.5">POTENTIAL RISKS &amp; CHALLENGES</div>
+                        <ul class="space-y-1.5 text-[#cbd5e1]">
+                            ${analysis.risks.map(risk => `<li class="flex gap-x-2"><span class="text-[#7f1d1d] mt-1">•</span> <span>${risk}</span></li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <div class="text-xs uppercase tracking-wider text-[#64748b] mb-1.5">RECOMMENDED NEXT STEPS</div>
+                        <ul class="space-y-1.5 text-[#cbd5e1]">
+                            ${analysis.recommendations.map(rec => `<li class="flex gap-x-2"><span class="text-emerald-400 mt-1">→</span> <span>${rec}</span></li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="pt-3 border-t border-white/10">
+                        <div class="flex items-start gap-x-3">
+                            <div class="text-xs uppercase tracking-wider text-[#64748b] pt-0.5 whitespace-nowrap">OVERALL</div>
+                            <p class="text-sm text-[#e2e8f0]">${analysis.assessment}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-7 pt-5 border-t border-white/10 flex flex-col sm:flex-row gap-3">
+                    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); resetScanner();" 
+                            class="flex-1 py-3.5 text-sm font-semibold bg-[#7f1d1d] hover:bg-[#9f1239] rounded-2xl transition-colors flex items-center justify-center gap-x-2">
+                        <span>Book Full Professional Review</span>
+                    </button>
+                    <button onclick="resetScanner()" 
+                            class="flex-1 py-3.5 text-sm font-medium border border-white/20 hover:bg-white/5 rounded-2xl transition-colors">
+                        Try Another Analysis
+                    </button>
+                </div>
+                
+                <div class="mt-4 text-center">
+                    <div class="text-[10px] text-[#475569]">This is a simulated demonstration of Dandniti’s AI capabilities. It does not constitute legal advice.</div>
+                </div>
+            `;
+            
+            resultsPanel.innerHTML = html;
+        }
+
+        function resetScanner() {
+            const placeholder = document.getElementById('scanner-results-placeholder');
+            const resultsPanel = document.getElementById('scanner-results');
+            
+            resultsPanel.classList.add('hidden');
+            placeholder.classList.remove('hidden');
+            
+            // Clear textarea optionally
+            // document.getElementById('ip-description').value = '';
+        }
+
+        function loadSampleInput() {
+            const typeSelect = document.getElementById('ip-type');
+            const descArea = document.getElementById('ip-description');
+            
+            // Pick a random type or cycle
+            const samples = [
+                { type: 'patent', text: "A novel process for extracting high-purity steviol glycosides from stevia leaves using enzymatic treatment and membrane filtration, resulting in 30% higher yield and significantly lower energy consumption compared to conventional solvent extraction methods." },
+                { type: 'trademark', text: "A new brand name 'VIVARA' for premium organic skincare products targeted at urban millennials in India. The logo uses a minimalist leaf motif in deep green and gold." },
+                { type: 'copyright', text: "An original collection of 12 short stories exploring themes of migration and identity in contemporary Bihar, written in Hindi with some Bhojpuri dialect. Intended for publication as a book and also as an audiobook." },
+                { type: 'trade-secret', text: "A proprietary formulation and manufacturing process for a natural food preservative derived from local spices and herbs that extends shelf life of packaged snacks by 4-6 months without synthetic additives. The exact ratios and processing temperatures are known only to two people in the company." }
+            ];
+            
+            const randomSample = samples[Math.floor(Math.random() * samples.length)];
+            
+            typeSelect.value = randomSample.type;
+            descArea.value = randomSample.text;
+            
+            // Scroll to scanner if needed
+            document.getElementById('scanner').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // Contact Form Handler
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            
+            const form = document.getElementById('contact-form');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<span class="flex items-center justify-center gap-x-2"><i class="fa-solid fa-spinner fa-spin"></i> Sending...</span>`;
+            
+            // Simulate sending
+            setTimeout(() => {
+                form.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+                
+                // Show success toast
+                showToast("Thank you. Your message has been received. We will contact you within 24-48 hours.");
+                
+                // Optional: scroll to top or show confirmation
+            }, 1450);
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('success-toast');
+            document.getElementById('toast-message').textContent = message;
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+            
+            setTimeout(() => {
+                toast.classList.remove('flex');
+                toast.classList.add('hidden');
+            }, 5200);
+        }
+
+        function openContactModal() {
+            // Since we have a full contact section, just scroll smoothly
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Focus first field after scroll
+            setTimeout(() => {
+                document.getElementById('contact-name').focus();
+            }, 900);
+        }
+
+        // Initialize Knowledge Base
+        function initKnowledgeBase() {
+            renderFilterButtons();
+            renderKnowledgeBase(resources);
+            
+            // Make search also trigger on Enter (already on keyup)
+            const searchInput = document.getElementById('knowledge-search');
+            searchInput.addEventListener('focus', () => {
+                if (window.innerWidth < 768) {
+                    document.getElementById('knowledge').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        }
+
+        // Main Initialization
+        function initializeWebsite() {
+            initTailwind();
+            
+            // Render dynamic content
+            renderServices();
+            initKnowledgeBase();
+            
+            // Keyboard escape for modals
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const serviceModal = document.getElementById('service-modal');
+                    const resourceModal = document.getElementById('resource-modal');
+                    
+                    if (!serviceModal.classList.contains('hidden') && serviceModal.classList.contains('flex')) {
+                        closeServiceModal();
+                    } else if (!resourceModal.classList.contains('hidden') && resourceModal.classList.contains('flex')) {
+                        closeResourceModal();
+                    } else {
+                        // Close mobile menu if open
+                        const mobileMenu = document.getElementById('mobile-menu');
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                            document.getElementById('mobile-menu-btn').innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+                        }
+                    }
+                }
+                
+                // Quick access: press '/' to focus knowledge search
+                if (e.key === '/' && document.activeElement.tagName === 'BODY') {
+                    e.preventDefault();
+                    document.getElementById('knowledge-search').focus();
+                }
+            });
+            
+            // Optional: Preload a subtle interaction hint (can be removed)
+            console.log('%c[Dandniti] Premium website initialized successfully. All interactive components ready.', 'color:#475569');
+            
+            // Accessibility: Allow Enter on filter buttons if focused
+            // Already handled by click handlers
+        }
+
+        // Boot the website
+        window.onload = function() {
+            initializeWebsite();
+        };
+        
+        // Expose a couple of functions for debugging / future extension if needed
+        window.Dandniti = {
+            reloadKnowledge: () => {
+                document.getElementById('knowledge-search').value = '';
+                currentFilter = 'all';
+                renderFilterButtons();
+                renderKnowledgeBase(resources);
+            }
+        };
+    </script>
+</body>
+</html>
